@@ -62,9 +62,9 @@
       <input id="input" autocomplete="off" /><button>Send</button>
     </form>
   </body>
-  <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
   <script>
-    let socket = io("http://localhost:3000");
+    let socket = io();
     var form = document.getElementById("form");
     var input = document.getElementById("input");
     var messages = document.getElementById("messages");
