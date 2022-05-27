@@ -40,13 +40,6 @@ io.on("connection", (socket) => {
 
   // message
   socket.on("message", (msg, to) => {
-    // users.forEach((user) => {
-    //   console.log("looking for selected user");
-    //   if (user.username == to) {
-    //     io.to([user.socket_id, socket.id]).emit("message", msg);
-    //     console.log("found");
-    //   }
-    // });
     let i = 0;
     let found = false;
     do {
@@ -57,7 +50,7 @@ io.on("connection", (socket) => {
         found = true;
       }
       i = i + 1;
-    } while (i < users.length && found == false);
+    } while (i <= users.length && found == false);
   });
 
   // disconnect
